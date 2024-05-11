@@ -1,0 +1,56 @@
+.logo {
+  height: 60px;
+  transition: height 0.3s ease; /* Agrega una transición suave */
+}
+
+.logo.expanded {
+  height: 150px; /* Aumenta el tamaño del logo cuando el menú se abre */
+}
+
+/* Agrega estilos de animación para las opciones del menú */
+.nav-link {
+  position: relative; /* Establece la posición relativa para los elementos .nav-link */
+  transition: color 0.3s ease; /* Agrega una transición suave para el color del texto */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Ajusta la posición del marcador */
+  left: 0;
+  width: 0;
+  height: 2px; /* Grosor del marcador */
+  background-color: #007bff; /* Color del marcador */
+  transition: width 0.3s ease; /* Agrega una transición suave para la anchura del marcador */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Anima la anchura del marcador cuando el mouse está sobre la opción del menú */
+}
+
+.nav-item.active .nav-link::after {
+  width: 100%; /* Mantiene el marcador visible en la opción activa */
+}
+
+.nav-item.active .nav-link {
+  font-weight: bold; /* Cambia el peso del texto a negrita */
+}
+
+.submenu {
+  display: none; /* Oculta el submenu por defecto */
+  position: absolute; /* Posición absoluta para superponer al menú principal */
+  background-color: #fff; /* Color de fondo del submenu */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+}
+
+.nav-item:hover .submenu {
+  display: block; /* Muestra el submenu cuando se pasa el ratón sobre el elemento de menú principal */
+}
+
+@media (max-width: 991px) {
+  .submenu {
+    position: relative; /* Cambia a posición relativa */
+    top: 0;
+    left: 100%; /* Alinea el submenú a la derecha del elemento de menú principal */
+  }
+}

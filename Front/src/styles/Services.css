@@ -1,0 +1,7 @@
+.card-animation {
+    transition: transform 0.3s ease;
+  }
+  
+  .card-animation:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la card al pasar el cursor sobre ella */
+  }

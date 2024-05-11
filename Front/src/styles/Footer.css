@@ -1,0 +1,28 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  z-index: 1; /* Agrega el z-index aquí */
+}
+
+.footer p {
+  margin-bottom: 0; /* Evita el espacio extra debajo del párrafo */
+}
+
+.footer a {
+  color: #fff; /* Color de los enlaces */
+  font-size: 25px; /* Tamaño de los iconos */
+  margin-right: 20px; /* Espacio entre los iconos */
+}
+
+.footer a:last-child {
+  margin-right: 0; /* Elimina el espacio derecho del último icono */
+}
+
+.footer a:hover {
+  color: #007bff; /* Cambia el color de los enlaces al pasar el mouse sobre ellos */
+}
